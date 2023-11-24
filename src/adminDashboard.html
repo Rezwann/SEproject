@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin: Dashboard</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminDashboard.css">
+</head>
+
+<header>
+    <div class="headStyle">
+        <form class="Log-Out-Form headrow" action="./login.html">
+            <div class="dropdown">
+                <img class="menu" src="new-hamburger-menu.png" style="height: 30px; width: 30px;"></img>
+                <div class="dropdown-content">
+                    <a href="timesheetForAdmin.html">Timesheet</a>
+                    <a href="profile.html">User Information</a>
+                </div>
+            </div>
+            <div><img class="LOGO" src="logo.png" style="height: 110px; width: 170px;"></img>
+            </div>
+            <div><input class="Log-Out-Button" type="submit" value="Log Out" /></div>
+        </form>
+    </div>
+</header>
+
+<body>
+    <div class="Admin-Container">
+        <div class="Admin-Title">
+            <h1>Admin: Dashboard</h1>
+        </div>
+        <form class="Main-Admin-Form">
+            <div class="main-section">
+                <h1 class="Admin-Sub-Title">Manage Existing Users</h1>
+
+                <div class="scroll">
+                    <table class="admin-table" id="userdata_table">
+                        <tr>
+                            <th>User ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Role</th>
+                            <th>Manager</th>
+                            <th>Permission Type</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Last Active</th>
+                            <th>Manage</th>
+                        </tr>
+
+                        <tr id="row1">
+                            <td id="ID_row1">6778</td>
+                            <td id="FNAME_row1">Mohammed</td>
+                            <td id="LNAME_row1">Ahmed</td>
+                            <td id="ROLE_row1">Admin</td>
+                            <td id="assignedManager_row1">Oliver</td>
+                            <td id="PERMTYPE_row1">Full</td>
+                            <td id="PNUM_row1">07778877390</td>
+                            <td id="EMAIL_row1">admin@adm.co.uk</td>
+                            <td id="UNAME_row1">admin</td>
+                            <td id="PASS_row1">admin</td>
+                            <td id="LACTIVE_row1">14/04/22</td>
+                            <td></td>
+                            <td>
+                                <!-- <input type="button" id="edit_button1" value="Edit" class="edit" onclick="EditTableRow('1')">
+                                    <input type="button" id="save_button1" value="Save" class="save" onclick="SubmitTableRow('1')">
+                                    <input type="button" value="Delete" class="delete" onclick="DeleteTableRow('1')"> -->
+                            </td>
+                        </tr>
+
+                        <tr id="row2">
+                            <td id="ID_row2">8472</td>
+                            <td id="FNAME_row2">John</td>
+                            <td id="LNAME_row2">Smith</td>
+                            <td id="ROLE_row2">Line Manager</td>
+                            <td id="assignedManager_row2">Jack</td>
+                            <td id="PERMTYPE_row2">Limited</td>
+                            <td id="PNUM_row2">07778398790</td>
+                            <td id="EMAIL_row2">linemgr@lm.co.uk</td>
+                            <td id="UNAME_row2">linemanager</td>
+                            <td id="PASS_row2">linemanager</td>
+                            <td id="LACTIVE_row2">14/04/22</td>
+                            <td class="manageButtons">
+                                <input type="button" id="edit_button2" value="Edit" class="edit" onclick="EditTableRow('2')">
+                                <input type="button" id="save_button2" value="Save" class="save" onclick="SubmitTableRow('2')">
+                                <input type="button" value="Delete" class="delete" onclick="DeleteTableRow('2')">
+                            </td>
+                        </tr>
+
+                        <tr id="row3">
+                            <td id="ID_row3">2312</td>
+                            <td id="FNAME_row3">Cora</td>
+                            <td id="LNAME_row3">Holland</td>
+                            <td id="ROLE_row3">Consultant</td>
+                            <td id="assignedManager_row3">James</td>
+                            <td id="PERMTYPE_row3">Limited</td>
+                            <td id="PNUM_row3">07783922190</td>
+                            <td id="EMAIL_row3">csnt@con.co.uk</td>
+                            <td id="UNAME_row3">consultant</td>
+                            <td id="PASS_row3">consultant</td>
+                            <td id="LACTIVE_row3">14/04/22</td>
+                            <td class="manageButtons">
+                                <input type="button" id="edit_button3" value="Edit" class="edit" onclick="EditTableRow('3')">
+                                <input type="button" id="save_button3" value="Save" class="save" onclick="SubmitTableRow('3')">
+                                <input type="button" value="Delete" class="delete" onclick="DeleteTableRow('3')">
+                            </td>
+                        </tr>
+
+                        <tr id="row4">
+                            <td id="ID_row4">5412</td>
+                            <td id="FNAME_row4">Archie</td>
+                            <td id="LNAME_row4">Arroyo</td>
+                            <td id="ROLE_row4">Finance</td>
+                            <td id="assignedManager_row4">Harry</td>
+                            <td id="PERMTYPE_row4">Limited</td>
+                            <td id="PNUM_row4">07722934290</td>
+                            <td id="EMAIL_row4">finance@fin.co.uk</td>
+                            <td id="UNAME_row4">financeteam</td>
+                            <td id="PASS_row4">financeteam</td>
+                            <td id="LACTIVE_row4">14/04/22</td>
+                            <td class="manageButtons">
+                                <input type="button" id="edit_button4" value="Edit" class="edit" onclick="EditTableRow('4')">
+                                <input type="button" id="save_button4" value="Save" class="save" onclick="SubmitTableRow('4')">
+                                <input type="button" value="Delete" class="delete" onclick="DeleteTableRow('4')">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="Control-Interface">
+                <td><input placeholder="Enter ID" type="text" id="new_ID"></td>
+                <td><input type="text" placeholder="First Name" id="new_FNAME"></td>
+                <td><input type="text" placeholder="Last Name" id="new_LNAME"></td>
+                <td><input type="text" placeholder="Role" id="new_ROLE"></td>
+                <td><input type="text" placeholder="Manager" id="new_MGR"></td>
+                <td><input type="text" placeholder="Permission Type" id="new_PERM"></td>
+                <td><input type="text" placeholder="Phone Number" id="new_PNUM"></td>
+                <td><input type="text" placeholder="Email" id="new_EMAIL"></td>
+                <td><input type="text" placeholder="Username" id="new_UNAME"></td>
+                <td><input type="text" placeholder="Password" id="new_PASS"></td>
+                <td><input type="text" placeholder="Last Active" id="new_LACTIVE"></td>
+                <td><input class="AddPT-Button" type="button" class="add" onclick="AddTableRow();" value="Add Row"></td>
+            </div>
+
+            <h1 class="Admin-Sub-Title">Search User By Employee ID</h1>
+    </div>
+    <script src="adminDashboard.js"></script>
+    </div>
+</body>
+
+<footer>
+    <div class="footer">
+        <p>© 2021 TrCK All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

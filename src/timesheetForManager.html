@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Timesheet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="timesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+</head>
+
+<header>
+    <div class="headStyle">
+        <form class="Log-Out-Form headrow" action="./login.html">
+            <div class="dropdown">
+                <img class="menu" src="new-hamburger-menu.png" style="height: 30px; width: 30px;"></img>
+                <div class="dropdown-content">
+                    <a href="timesheet.html">Timesheet</a>
+                    <a href="manage.html">Line Manager: View Submitted Timesheets </a>
+                    <a href="profile.html">User Information</a>
+                </div>
+            </div>
+            <div><img class="LOGO" src="logo.png" style="height: 110px; width: 170px;"></img>
+            </div>
+            <div><input class="Log-Out-Button" type="submit" value="Log Out" /></div>
+        </form>
+    </div>
+</header>
+
+<body>
+    <div id="capture">
+        <!-- <!–– 'capture' div that is entirely exported ––> -->
+        <div class="Timesheet-Container">
+            <div class="Timesheet-Title">
+                <h1>Your Timesheet</h1>
+            </div>
+            <form class="Main-Timesheet-Form">
+                <div class="main-section">
+                    <label class="MTF-Label" for="EmpName">Employee Name:</label>
+                    <input style="width: 20%;" type="text" class="" id="EmpName" placeholder="Employee Name">
+                    <label class="MTF-Label" for="EmpID">Employee ID:</label>
+                    <input style="width: 10%;" type="text" class="" id="EmpID" placeholder="Employee ID">
+                    <label class="MTF-Label" for="DepName">Department:</label>
+                    <input style="width: 10%;" type="text" class="DN-input" id="DepName" placeholder="Eg. Marketing">
+                    <label class="MTF-Label" for="LineManager">Manager:</label>
+                    <input type="text" list="LineManager" placeholder="Manager" />
+                    <datalist id="LineManager">
+                    <option>Winnie Lai Yeng Yap</option>
+                    <option>Rovish Bidjadhur</option>
+                    <option>Rafee Ahmed</option>
+                    <option>Mohammad Hamzah Mushtaq</option>
+                    <option>Larbi Belkhit</option>
+                      <option>Mohammed Rezwan Ahmed</option>
+                      <option>Aryanna Villegas</option>
+                      <option>Caitlin Rivera</option>
+                      <option>Cristian Jennings</option>
+                      <option>Sidney Trevino</option>
+                    </datalist>
+
+
+                    <label class="MTF-Label" for="contracthours">Contracted Hours:</label>
+                    <select class="MTF-container" name="contracted-hours" id="contracthours">
+                        <option value="20">20 hours</option>
+                        <option value="32">32 hours</option>
+                        <option value="40">40 hours</option>
+                        <option selected="selected" value="48">48 hours</option>
+                      </select>
+
+                    <label class="hourly-rate" for="hourlyrate">Hourly Rate:</label>
+                    <select class="MTF-container" name="hourly-rate" id="hourlyrate">
+                            <option value="10">10.00</option>
+                            <option selected="selected"value="15">15.00</option>
+                          </select>
+
+
+
+
+
+                    <label class="MTF-Label" for="datePickerWB">Week Beginning:</label>
+                    <input style="width: 10%;" type="text" class="WB-input" id="datePickerWB" placeholder="DD-MM-YYYY">
+                </div>
+
+                <div class="AddButton-Container">
+                    <div class="ButtonContainer">
+                        <form class="Add-Task-Form">
+                            <label class="MTF-Label" for="AddTaskClass">Add Key Task:</label>
+                            <input type="text" class="AddTaskClass" id="NewTask" placeholder="Enter a new Task">
+                            <button class="Add-Button" type="button" onclick="addNewTask()">Add New Task</button>
+                        </form>
+                        <form class="Add-Project-Form">
+                            <label class="MTF-Label" for="AddProjectClass">Add Key Project:</label>
+                            <input type="text" class="AddProjectClass" id="NewProject" placeholder="Enter a new Project">
+                            <button class="Add-Button" type="button" onclick="addNewProject()">Add New Project</button>
+                        </form>
+                    </div>
+                    <button class="AddPT-Button" id="export" type="button" onclick="exportTimesheet()">Export Timesheet</button>
+                    <button class="printPage" id="print" type="button" onclick="printTimesheet()">Print Timesheet</button>
+                    <form action="mailto:someone@gmail.com?subject=Timesheet">
+                        <input class="AddPT-Button" type="submit" value="Share Timesheet" />
+                    </form>
+                </div>
+            </form>
+
+
+            <div class="Selected-Timesheet">
+                <h1 class="Timesheet-Sub-Title">Selected Week Information</h1>
+                <div class="timesheet-table">
+                    <table class="ts-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Key Project</th>
+                            <th>Key Task</th>
+                            <th>Comments</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Lunch</th>
+                            <th>Annual Leave</th>
+                            <th>Hours</th>
+                            <th>Pay</th>
+                        </tr>
+                        <tr class="Row1">
+                            <td>Monday</td>
+                            <td id="Row1-date">-</td>
+                            <td>
+                                <select id="Projects-List1">
+                            <option>Project 1</option>
+                            <option>Project 2</option>
+                            <option>Project 3</option>
+                          </select>
+                            </td>
+                            <td>
+                                <select id="Tasks-List1">
+                            <option>Task 1</option>
+                            <option>Task 2</option>
+                            <option>Task 3</option>
+                          </select></td>
+                            <td><input type="text" class="timesheet-desc" placeholder="Enter description">
+                            </td>
+                            <td>
+                                <input name="start" type="text" id="timePickerStart1">
+                            </td>
+                            <td>
+                                <input name="end" type="text" id="timePickerEnd1">
+                            </td>
+                            <td><select class="lunch-select" id="lunch1">
+                            <option value="0">No Lunch</option>
+                            <option value="0.25">15 minutes</option>
+                            <option value="0.5">30 minutes</option>
+                            <option value="0.75 ">45 minutes</option>
+                            <option value="1 ">1 hour</option>
+                          </select>
+                            </td>
+
+                            <td><select class="AnnualLeaveSelect" id="AL">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                          </select>
+                            </td>
+
+                            <td>
+                                <input style="width: 50% " class="DayTotalHours" value="" type="text" id="duration1" placeholder="0.00" readonly>
+                            </td>
+                            <td>
+                                <input style="width: 100%" class="DayPay" value="" type="text" id="DayPay1" placeholder="0.00" readonly>
+                            </td>
+                        </tr>
+                        <tr class="Row2">
+                            <td>Tuesday</td>
+                            <td id="Row2-date">-</td>
+                            <td>
+                                <select id="Projects-List2">
+                            <option>Project 1</option>
+                            <option>Project 2</option>
+                            <option>Project 3</option>
+                          </select>
+                            </td>
+                            <td>
+                                <select id="Tasks-List2">
+                            <option>Task 1</option>
+                            <option>Task 2</option>
+                            <option>Task 3</option>
+                          </select></td>
+                            <td><input type="text" class="timesheet-desc" placeholder="Enter description">
+                            </td>
+                            <td>
+                                <input name="start" type="text" id="timePickerStart2">
+                            </td>
+                            <td>
+                                <input name="end" type="text" id="timePickerEnd2">
+                            </td>
+                            <td><select class="lunch-select" id="lunch2">
+                            <option value="0">No Lunch</option>
+                            <option value="0.25">15 minutes</option>
+                            <option value="0.5">30 minutes</option>
+                            <option value="0.75 ">45 minutes</option>
+                            <option value="1 ">1 hour</option>
+                          </select>
+                            </td>
+                            <td><select class="AnnualLeaveSelect" id="AL">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                          </select>
+                            </td>
+                            <td>
+                                <input style="width: 50%" class="DayTotalHours" value="" type="text" id="duration2" placeholder="0.00" readonly>
+                            </td>
+                            <td>
+                                <input style="width: 100%" class="DayPay" value="" type="text" id="DayPay2" placeholder="0.00" readonly>
+                            </td>
+                        </tr>
+                        <tr class="Row3 ">
+                            <td>Wednesday</td>
+                            <td id="Row3-date">-</td>
+                            <td>
+                                <select id="Projects-List3">
+                            <option>Project 1</option>
+                            <option>Project 2</option>
+                            <option>Project 3</option>
+                          </select>
+                            </td>
+                            <td>
+                                <select id="Tasks-List3">
+                            <option>Task 1</option>
+                            <option>Task 2</option>
+                            <option>Task 3</option>
+                          </select></td>
+                            <td><input type="text" class="timesheet-desc" placeholder="Enter description">
+                            </td>
+                            <td>
+                                <input name="start" type="text" id="timePickerStart3">
+                            </td>
+                            <td>
+                                <input name="end" type="text" id="timePickerEnd3">
+                            </td>
+                            <td><select class="lunch-select" id="lunch3">
+                            <option value="0">No Lunch</option>
+                            <option value="0.25">15 minutes</option>
+                            <option value="0.5">30 minutes</option>
+                            <option value="0.75 ">45 minutes</option>
+                            <option value="1 ">1 hour</option>
+                          </select>
+                            </td>
+                            <td><select class="AnnualLeaveSelect" id="AL">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                          </select>
+                            </td>
+                            <td>
+                                <input style="width: 50%" class="DayTotalHours" value="" type="text" id="duration3" placeholder="0.00" readonly>
+                            </td>
+                            <td>
+                                <input style="width: 100%" class="DayPay" value="" type="text" id="DayPay3" placeholder="0.00" readonly>
+                            </td>
+                        </tr>
+                        <tr class="Row4">
+                            <td>Thursday</td>
+                            <td id="Row4-date">-</td>
+                            <td>
+                                <select id="Projects-List4">
+                            <option>Project 1</option>
+                            <option>Project 2</option>
+                            <option>Project 3</option>
+                          </select>
+                            </td>
+                            <td>
+                                <select id="Tasks-List4">
+                            <option>Task 1</option>
+                            <option>Task 2</option>
+                            <option>Task 3</option>
+                          </select></td>
+                            <td><input type="text" class="timesheet-desc" placeholder="Enter description">
+                            </td>
+                            <td>
+                                <input name="start" type="text" id="timePickerStart4">
+                            </td>
+                            <td>
+                                <input name="end" type="text" id="timePickerEnd4">
+                            </td>
+                            <td><select class="lunch-select" id="lunch4">
+                            <option value="0">No Lunch</option>
+                            <option value="0.25">15 minutes</option>
+                            <option value="0.5">30 minutes</option>
+                            <option value="0.75 ">45 minutes</option>
+                            <option value="1 ">1 hour</option>
+                          </select>
+                            </td>
+                            <td><select class="AnnualLeaveSelect" id="AL">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                          </select>
+                            </td>
+                            <td>
+                                <input style="width: 50%" class="DayTotalHours" value="" type="text" id="duration4" placeholder="0.00" readonly>
+                            </td>
+                            <td>
+                                <input style="width: 100%" class="DayPay" value="" type="text" id="DayPay4" placeholder="0.00" readonly>
+                            </td>
+                        </tr>
+                        <tr class="Row5">
+                            <td>Friday</td>
+                            <td id="Row5-date">-</td>
+                            <td>
+                                <select id="Projects-List5">
+                            <option>Project 1</option>
+                            <option>Project 2</option>
+                            <option>Project 3</option>
+                          </select>
+                            </td>
+                            <td>
+                                <select id="Tasks-List5">
+                            <option>Task 1</option>
+                            <option>Task 2</option>
+                            <option>Task 3</option>
+                          </select></td>
+                            <td><input type="text" class="timesheet-desc" placeholder="Enter description">
+                            </td>
+                            <td>
+                                <input name="start" type="text" id="timePickerStart5">
+                            </td>
+                            <td>
+                                <input name="end" type="text" id="timePickerEnd5">
+                            </td>
+                            <td><select class="lunch-select" id="lunch5">
+                            <option value="0">No Lunch</option>
+                            <option value="0.25">15 minutes</option>
+                            <option value="0.5">30 minutes</option>
+                            <option value="0.75 ">45 minutes</option>
+                            <option value="1 ">1 hour</option>
+                          </select>
+                            </td>
+                            <td><select class="AnnualLeaveSelect" id="AL">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                          </select>
+                            </td>
+                            <td>
+                                <input style="width: 50%" class="DayTotalHours" value="" type="text" id="duration5" placeholder="0.00" readonly>
+                            </td>
+                            <td>
+                                <input style="width: 100%" class="DayPay" value="" type="text" id="DayPay5" placeholder="0.00" readonly>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="Control-Interface">
+                <div class="TotalDetails">
+                    <h2 id="thlabel" class="result-calculation">Total:</h2>
+                    <h2 id="totalFigure" style="font-size: 1.5rem;" class="result-calculation">Press 'update' for total</h2>
+                    <h2 id="sub-text-totalFigure" style="font-size: 1.5rem;" class="result-calculation"></h2>
+                    <h2 id="overtime-totalFigure" style="font-size: 1.5rem;" class="result-calculation"></h2>
+
+                    <button class="AddPT-Button" id="totalhoursbutton" type="button" onclick="calcTotal()">Update Total Hours/Weekly Pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+    <script>
+        window.jsPDF = window.jspdf.jsPDF;
+    </script>
+    <script src="timesheet.js"></script>
+    </div>
+</body>
+
+<footer>
+    <div class="footer">
+        <p>© 2021 TrCK All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

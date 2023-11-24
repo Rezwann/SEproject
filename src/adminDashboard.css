@@ -1,0 +1,275 @@
+body {
+    background-color: #DCE0D9;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.admin-table {
+    width: 100%;
+    align-content: center;
+    margin: 0 auto;
+    border: 5px solid #ccc;
+    border-radius: 30px;
+    padding: 2rem;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    background-color: rgb(238, 238, 238);
+    overflow: scroll;
+}
+
+.manageButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit,
+.delete,
+.save {
+    float: left;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 80%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.1rem;
+    outline: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #e7628c;
+    border-color: transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+/* .scroll {
+    overflow: scroll;
+    height: 30vh;
+    padding: 2.5rem;
+} */
+
+
+/* ----------------- Navbar (hamburger, logo, logout) CSS ----------------- */
+
+.headStyle {
+    border-radius: 20px;
+    background: #161B33;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 0px;
+    border: 1px solid white;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.headrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7628c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.Log-Out-Button {
+    box-sizing: border-box;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-size: 1em;
+    font-family: inherit;
+    background: #e7628c;
+    color: #fff;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    /* box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(229, 229, 229, 0.24); */
+    border-radius: 10px;
+}
+
+.Log-Out-Button,
+.Log-Out-Button:hover {
+    background-color: #902d4d;
+    color: #fff;
+}
+
+
+/* ----------------- ------------------------------------- ----------------- */
+
+.Admin-Container {
+    background-color: #161B33;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0px 15px 20px;
+    border: 1px solid white;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    color: #161B33;
+    overflow: scroll;
+}
+
+.Admin-Title {
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.3em;
+}
+
+.Main-Admin-Form {
+    background: #DCE0D9;
+    /* background-color: #76a5afff; */
+    margin: 0 auto;
+    width: 85%;
+    padding: 2rem;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border: 1pt solid white;
+    border-radius: 20px;
+}
+
+.Admin-Sub-Title {
+    color: black;
+    text-align: center;
+    padding: 0.2rem;
+    letter-spacing: 1pt;
+    font-size: 1.3em;
+}
+
+.AddPT-Button {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #e7628c;
+    border-color: transparent;
+    border-radius: 10pt;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.AddPT-Button:hover {
+    background: #902d4d;
+}
+
+.Selected-Admin {
+    background: #DCE0D9;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    /* background: #0c343dff; */
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 85%;
+    padding: 2rem;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    overflow: scroll;
+    border-radius: 20px;
+}
+
+.main-section {
+    align-content: left;
+    justify-content: left;
+    margin-bottom: 1rem;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+select {
+    padding: 0.5rem
+}
+
+label {
+    padding: 1rem;
+}
+
+.Add-Button {
+    background-color: #c62458;
+    border-radius: 10pt;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.Add-Button:hover {
+    background-color: #880931;
+}
+
+.Admin-table {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+th {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    padding: 0.5rem;
+}
+
+
+/* ----------------- Footer CSS ----------------- */
+
+.footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-top: 1px solid white;
+    width: 100%;
+    background-color: #161B33;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-style: italic;
+}

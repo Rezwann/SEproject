@@ -1,0 +1,168 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.head-style,
+.timesheet-list {
+    border-radius: 20px;
+    background: #161B33;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 0px;
+    border: 1px solid white;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.managetitle {
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 2em;
+}
+
+.button1,
+.button2,
+.button3 {
+    box-sizing: border-box;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-size: 1em;
+    font-family: inherit;
+    background: #e7628c;
+    color: #fff;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    /* box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(229, 229, 229, 0.24); */
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+.ImagePreview {
+    border: 3px solid #e7628c;
+    width: 50rem;
+    height: 30rem;
+}
+
+img {
+    width: 50rem;
+    height: 30rem;
+}
+
+#second,
+#third {
+    display: none
+}
+
+button {
+    outline: none;
+}
+
+.headrow,
+.timesheet-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Manage-Title {
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 2em;
+}
+
+.Manage-Container {
+    background-color: lightgrey;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0px 15px 20px;
+    border: 1px solid white;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    color: #161B33;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7628c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.log-out-btn {
+    box-sizing: border-box;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-size: 1em;
+    font-family: inherit;
+    background: #e7628c;
+    color: #fff;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    /* box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(229, 229, 229, 0.24); */
+    border-radius: 10px;
+}
+
+.timesheet-list {
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.timesheet-item {
+    display: flex;
+}
+
+.timesheet-item button {
+    box-sizing: border-box;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-size: 1em;
+    font-family: inherit;
+    background: #e7628c;
+    color: #fff;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    /* box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(229, 229, 229, 0.24); */
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+.timesheet-item button a,
+.timesheet-item button a:checked {
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,213 @@
+body {
+    background-color: #DCE0D9;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+/* ----------------- Navbar (hamburger, logo, logout) CSS ----------------- */
+
+.headStyle {
+    border-radius: 20px;
+    background: #161B33;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 0px;
+    border: 1px solid white;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.headrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7628c
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.Log-Out-Button,
+.contact-admin-button {
+    box-sizing: border-box;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    outline: 0;
+    font-size: 1em;
+    font-family: inherit;
+    background: #e7628c;
+    color: #fff;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    /* box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(229, 229, 229, 0.24); */
+    border-radius: 10px;
+}
+
+.Log-Out-Button:hover,
+.contact-admin-button:hover {
+    background-color: #902d4d;
+}
+
+
+/* ----------------- User Information CSS ----------------- */
+
+.main-profile-container {
+    background-color: #161B33;
+    border: 1px solid white;
+    border-radius: 20pt;
+    min-width: 50%;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    color: white;
+}
+
+.user-icon {
+    width: 30px;
+    margin-left: 2%;
+}
+
+.main-profile-header>img,
+.main-profile-header>h3 {
+    display: inline-block;
+}
+
+.main-profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-profile-info table td:nth-child(1) {
+    width: 50%;
+    text-align: left;
+}
+
+.main-profile-info table {
+    table-layout: fixed;
+}
+
+.main-profile-info table td:nth-child(2) {
+    width: 170px;
+    text-align: right;
+}
+
+.main-profile-info th {
+    height: 70px;
+}
+
+
+/* ----------------- Contact Admin Button CSS ----------------- */
+
+.contact-admin-button {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 7px;
+    right: 15px;
+    border: 3px solid white;
+    border-radius: 20pt;
+    z-index: 9;
+    color: white;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgb(129, 153, 156);
+    border-radius: 20pt;
+    background-color: #161B33;
+}
+
+.form-container input[type=text] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container .btn {
+    background-color: green;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .btn:hover {
+    background-color: darkgreen;
+}
+
+.form-container .cancel {
+    background-color: rgb(213, 40, 40);
+}
+
+.form-container .cancel:hover {
+    background-color: darkred;
+}
+
+
+/* ----------------- Footer CSS ----------------- */
+
+
+/* This is different to the one on timesheet */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid white;
+    width: 100%;
+    background-color: #161B33;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-style: italic;
+}

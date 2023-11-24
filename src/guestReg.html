@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0f0a68bad3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <!-- <video src="./Background.mp4" loop muted autoplay> -->
+    <!-- </video> -->
+    <div id="clockdate">
+        <div id="main-clock" class="login-page-clockdate-wrapper">
+            <!-- <section class="login-main-title">TrCK </section> -->
+            <img src="logo.png" alt="TrCK" width="300">
+            <!-- <div id="login-page-date"></div>
+            <div id="login-page-clock"></div> -->
+        </div>
+    </div>
+        <div class="registration-form-outer">
+            <form class="registration-form">
+                <h3 class="registration-form-title">Create a Guest Account</h3>
+                <i class="fa-solid fa-user" style="padding-left: 0.25rem"></i>
+                <label class="registration-form-label">Username</label>
+                <input class="registration-form-input" id="newUsername" type="text" name="newuname" placeholder="Enter Username" required>
+                <i class="fa-solid fa-lock" style="padding-left: 0.25rem"></i>
+                <label class="registration-form-label" for="password">Password</label>
+                <input class="registration-form-input" id="newPassword" type="password" name="newpassword" placeholder="Enter Password" required>
+                <button class="registration-button" type="button" onclick="createAccount()">Register</button>
+                <input class="registration-reset-button" type="Reset">
+                <a class="back-link" href="login.html">Go back</a>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

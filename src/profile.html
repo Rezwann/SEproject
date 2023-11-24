@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<header>
+    <div class="headStyle">
+        <form class="Log-Out-Form headrow" action="./login.html">
+            <div class="dropdown">
+                <img class="menu" src="new-hamburger-menu.png" style="height: 30px; width: 30px;"></img>
+                <div class="dropdown-content">
+                    <a href="timesheet.html">Timesheet</a>
+                    <a href="profile.html">User Information</a>
+                </div>
+            </div>
+            <div><img class="LOGO" src="logo.png" style="height: 110px; width: 170px;"></img>
+            </div>
+            <div><input class="Log-Out-Button" type="submit" value="Log Out" /></div>
+        </form>
+    </div>
+</header>
+
+<body>
+
+    <div class="main-profile-container">
+
+        <div class="main-profile-header">
+            <h3>User Information</h3>
+            <img class="user-icon" src="user-icon.png" alt="user-icon">
+        </div>
+
+        <div class="main-profile-info">
+            <table>
+                <tr>
+                    <td>User ID:</td>
+                    <td>007</td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td>Hamzah</td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>Mushtaq</td>
+                </tr>
+                <tr>
+                    <td>Role:</td>
+                    <td>Consultant</td>
+                </tr>
+                <tr>
+                    <td>Assigned Manager:</td>
+                    <td>Eileen Graham</td>
+                </tr>
+                <tr>
+                    <td>Permission Type:</td>
+                    <td>Consultant</td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td>+44 7700 900638</td>
+                </tr>
+                <tr>
+                    <td>Last Active:</td>
+                    <td>13-04-2022</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <button class="contact-admin-button" type="button" onclick="openForm()">Contact Admin</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Query Form</h1>
+
+            <label for="name"><b>Name:</b></label>
+            <input type="text" placeholder="Enter Full Name" name="name" required>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="message"><b>Message:</b></label>
+            <textarea name="question2" cols="35" rows="5" maxlength="250"> 
+        </textarea>
+
+            <button type="button" class="btn" onclick="success()">Submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function success() {
+            alert("message sent");
+            closeForm();
+        }
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+
+<footer>
+    <div class="footer">
+        <p>© 2021 TrCK All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Consultants</title>
+    <link rel="stylesheet" href="./manage.css">
+    <script src="./manage.js" defer></script>
+</head>
+
+<header>
+    <div class="head-style">
+        <form class="log-out-form headrow" action="./login.html">
+            <div class="dropdown">
+                <img class="menu" src="new-hamburger-menu.png" style="height: 30px; width: 30px;"></img>
+                <div class="dropdown-content">
+                    <a href="timesheetForManager.html">Timesheet</a>
+                    <a href="profile.html">User Information</a>
+
+                </div>
+            </div>
+            <div><img class="LOGO" src="logo.png" style="height: 110px; width: 170px;"></img>
+            </div>
+            <div><input class="log-out-btn" type="submit" value="Log Out" /></div>
+        </form>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="timesheet-list">
+            <h1>View Submitted Timesheets</h1>
+        </div>
+    </div>
+
+    <script>
+        function fail() {
+            alert("Timesheet Rejected")
+        }
+
+        function success() {
+            alert("Timesheet Approved")
+        }
+    </script>
+
+</body>
+
+</html>

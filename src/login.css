@@ -1,0 +1,171 @@
+body {
+    background-color: #161B33;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.login-form-title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 1.6rem;
+}
+
+.login-form {
+    background-color: #DCE0D9;
+    padding: 4% 4%;
+    margin: 1% 0%;
+    height: 20rem;
+    letter-spacing: 0.1rem;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30pt;
+}
+
+.login-form-input {
+    width: 100%;
+    padding: 0.8rem 0.8rem;
+    margin: 0.5rem 0rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    outline: 0;
+    background-color: #fff;
+    font-size: 0.7rem;
+    border: none;
+}
+
+.login-form-label {
+    font-family: Arial;
+    font-size: 85%;
+    font-weight: bold;
+    color: rgb(85, 78, 78);
+    margin-bottom: 1rem;
+    margin-left: 0.2rem;
+}
+
+.login-reset-button {
+    width: 100%;
+    font-weight: bold;
+    background: #e7628c;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10pt;
+    justify-content: center;
+}
+
+.login-reset-button:hover {
+    background-color: #902d4d;
+    cursor: pointer;
+}
+
+.login-button {
+    width: 100%;
+    font-weight: bold;
+    background-color: #e7628c;
+    color: white;
+    padding: 0.7rem 2rem;
+    margin: 0.75rem 0;
+    border: none;
+    border-radius: 10pt;
+    justify-content: center;
+}
+
+.login-button:hover {
+    background-color: #902d4d;
+    cursor: pointer;
+}
+
+.login-page-clockdate-wrapper {
+    /* background-color: rgba(150, 150, 150, 0.63); */
+    padding: 1%;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1%;
+}
+
+.guest-link,
+.back-link {
+    padding-top: 20px;
+    font-size: 65%;
+    color: #161B33;
+    float: left;
+}
+
+
+/* -------------------------------------------------Guest------------------------------------------------------- */
+
+.registration-form {
+    background-color: #DCE0D9;
+    padding: 4% 4%;
+    margin: 1% 0%;
+    height: 20rem;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30pt;
+}
+
+.registration-form-input {
+    width: 100%;
+    padding: 0.8rem 0.8rem;
+    margin: 0.5rem 0rem;
+    border: 0.1rem solid rgb(194, 189, 189);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    outline: 0;
+    background-color: #fff;
+    font-size: 0.7rem;
+}
+
+.registration-form-label {
+    font-size: 85%;
+    font-weight: bold;
+    color: rgb(85, 78, 78);
+    margin-bottom: 1rem;
+    margin-left: 0.2rem;
+}
+
+.registration-button {
+    width: 100%;
+    font-weight: bold;
+    background-color: #e7628c;
+    ;
+    color: white;
+    border-radius: 10pt;
+    padding: 0.7rem 2rem;
+    margin: 0.75rem 0;
+    border: none;
+    justify-content: center;
+}
+
+.registration-button:hover {
+    background-color: #902d4d;
+    cursor: pointer;
+}
+
+.registration-reset-button {
+    width: 100%;
+    font-weight: bold;
+    background-color: #e7628c;
+    color: white;
+    border-radius: 10pt;
+    padding: 0.75rem 1rem;
+    border: none;
+    justify-content: center;
+}
+
+.registration-reset-button:hover {
+    background-color: #902d4d;
+    cursor: pointer;
+}
+
+.registration-form-title {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
